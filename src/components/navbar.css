@@ -1,0 +1,29 @@
+.navbar {
+  background: #000;
+  display: flex;
+  color: beige;
+  padding: 1rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.links * {
+  text-decoration: none;
+  color: aqua;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: aliceblue;
+  display: inline-block;
+}
