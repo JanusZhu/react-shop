@@ -19,3 +19,4 @@ npm start
 - [React Router](https://reactrouter.com/)
 - [Fake Store API](https://fakestoreapi.com/)
 - [React useContext](https://beta.reactjs.org/reference/react/useContext)
+- [Tailwind](https://tailwindcss.com/)
