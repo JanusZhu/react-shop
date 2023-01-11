@@ -33,8 +33,23 @@ export const ShopContextProvider = (props) => {
       [itemID]: amount >= 1 ? Number(amount) : 0,
     }));
   };
+  const calSubtotal = () => {
+    let subtotal = 0;
+    for (let i = 1; i < PRODUCTS.length + 1; i++) {
+      if (cartItems[i] !== 0) {
+        subtotal += cartItems[i] * PRODUCTS[i - 1].price;
+      }
+    }
+    return subtotal.toFixed(2);
+  };
 
-  const contextValue = { cartItems, addItem, deleteItem, setItemAmount };
+  const contextValue = {
+    cartItems,
+    addItem,
+    deleteItem,
+    setItemAmount,
+    calSubtotal,
+  };
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

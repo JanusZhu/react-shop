@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Contact } from "./pages/Contact";
 import { Shop } from "./pages/shop/Shop";
 import { Cart } from "./pages/cart/Cart";
@@ -10,14 +10,20 @@ function App() {
   return (
     <div className="App">
       <ShopContextProvider>
-        <Router>
+        <HashRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<Shop />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
+            <Route
+              path="*"
+              element={
+                <h1 className="text-4xl font-bold py-8">Page not found</h1>
+              }
+            ></Route>
           </Routes>
-        </Router>
+        </HashRouter>
       </ShopContextProvider>
     </div>
   );
