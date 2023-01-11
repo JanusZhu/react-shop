@@ -13,17 +13,3 @@
   align-items: center;
   gap: 2rem;
 }
-
-.links * {
-  text-decoration: none;
-  color: aqua;
-}
-
-.logo {
-  width: 30px;
-  height: 30px;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background-color: aliceblue;
-  display: inline-block;
-}
