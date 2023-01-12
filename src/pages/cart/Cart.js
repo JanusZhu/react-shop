@@ -3,6 +3,7 @@ import { PRODUCTS } from "../../assets/productInfo/products";
 import { ShopContext } from "../../context/shop-context";
 import { CartItem } from "./CartItem";
 import { useNavigate } from "react-router-dom";
+import emptyCart from "../../assets/emptyCart.png";
 
 export const Cart = () => {
   const { cartItems, calSubtotal, clearCart, calNum } = useContext(ShopContext);
@@ -17,12 +18,13 @@ export const Cart = () => {
       </div>
 
       {subtotal === 0 || subtotal === "0.00" ? (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center gap-12">
+          <img className="w-40 h-30" src={emptyCart} alt="emptyCart" />
           <h1>Cart is empty. Add some products to the cart.</h1>
         </div>
       ) : (
-        <div className="flex pl-8 gap-8 justify-start items-start mb-20 py-0">
-          <div className="flex flex-col gap-8 w-3/5 border-solid rounded border-2 border-dark m-0 justify-start shadow-md shadow-black p-0">
+        <div className="flex pl-8 gap-8 justify-start items-start mb-20 pb-0">
+          <div className="flex flex-col gap-8 w-3/5 border-solid rounded border-2 border-dark m-0 justify-bewteen shadow-md shadow-black pt-8">
             {PRODUCTS.map((product) => {
               if (cartItems[product.id] !== 0) {
                 return <CartItem key={product.id} data={product} />;
