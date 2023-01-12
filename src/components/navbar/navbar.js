@@ -14,8 +14,9 @@ export const Navbar = () => {
         <Link to="/">Shop</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/cart">
-          <div className="logo bg-white rounded-full h-100% w-100% hover:scale-150 flex justify-center items-center">
+          <div className="logo bg-white rounded-full h-8 w-28 px-1 flex justify-center items-center">
             <img className="" src={cartlogo} alt="CartLogo" />
+            <p className="text-black">My Cart</p>
           </div>
         </Link>
       </div>

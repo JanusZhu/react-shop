@@ -6,8 +6,8 @@ export const CartItem = (props) => {
     useContext(ShopContext);
   const cartItemsAmount = cartItems[id];
   return (
-    <div className="border-solid rounded border-2 border-dark mx-20 p-8 shadow-md  shadow-black flex justify-center items-center gap-8">
-      <div>
+    <div className="border-solid rounded border-2 border-dark mx-20 p-8 shadow-md  shadow-black grid grid-cols-2 justify-center justify-items-center items-center">
+      <div className="justify-self-end">
         <img className="w-52 h-60" src={image} alt={`product${id}`} />
       </div>
       <div>

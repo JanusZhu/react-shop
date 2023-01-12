@@ -38,7 +38,7 @@ export const Cart = () => {
             </div>
           </div>
         )}
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-8">
           {PRODUCTS.map((product) => {
             if (cartItems[product.id] !== 0) {
               return <CartItem key={product.id} data={product} />;
