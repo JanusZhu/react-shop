@@ -10,12 +10,12 @@ export const CartItem = (props) => {
       <div className="justify-self-end">
         <img className="w-52 h-60" src={image} alt={`product${id}`} />
       </div>
-      <div>
+      <div className="flex flex-col justify-center items-center gap-2">
         <p className="text-1xl font-bold">{title}</p>
         <p>${price}</p>
         <div>
           <button
-            className="bg-blue-500 text-white px-3 py-1"
+            className="bg-blue-500 text-white px-3 py-1 rounded-l-lg"
             onClick={() => {
               deleteItem(id);
             }}
@@ -32,7 +32,7 @@ export const CartItem = (props) => {
             }}
           />
           <button
-            className="bg-blue-500 text-white px-3 py-1"
+            className="bg-blue-500 text-white px-3 py-1 rounded-r-lg"
             onClick={() => {
               addItem(id);
             }}

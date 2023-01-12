@@ -8,7 +8,7 @@ import { ShopContextProvider } from "./context/shop-context";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App min-w-full">
       <ShopContextProvider>
         <HashRouter>
           <Navbar />

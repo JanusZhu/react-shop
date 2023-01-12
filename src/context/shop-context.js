@@ -47,6 +47,16 @@ export const ShopContextProvider = (props) => {
     setCartItems(defaultCart());
   };
 
+  const calNum = () => {
+    let num = 0;
+    for (let i = 1; i < PRODUCTS.length + 1; i++) {
+      if (cartItems[i] !== 0) {
+        num += cartItems[i];
+      }
+    }
+    return Number(num);
+  };
+
   const contextValue = {
     cartItems,
     addItem,
@@ -54,6 +64,7 @@ export const ShopContextProvider = (props) => {
     setItemAmount,
     calSubtotal,
     clearCart,
+    calNum,
   };
   return (
     <ShopContext.Provider value={contextValue}>

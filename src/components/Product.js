@@ -25,7 +25,7 @@ export const Product = (props) => {
       ) : (
         <div>
           <button
-            className="bg-blue-500 text-white px-3 py-1"
+            className="bg-blue-500 text-white px-3 py-1 rounded-l-lg"
             onClick={() => {
               deleteItem(id);
             }}
@@ -42,7 +42,7 @@ export const Product = (props) => {
             }}
           />
           <button
-            className="bg-blue-500 text-white px-3 py-1"
+            className="bg-blue-500 text-white px-3 py-1 rounded-r-lg"
             onClick={() => {
               addItem(id);
             }}
