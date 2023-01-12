@@ -43,12 +43,17 @@ export const ShopContextProvider = (props) => {
     return subtotal.toFixed(2);
   };
 
+  const clearCart = () => {
+    setCartItems(defaultCart());
+  };
+
   const contextValue = {
     cartItems,
     addItem,
     deleteItem,
     setItemAmount,
     calSubtotal,
+    clearCart,
   };
   return (
     <ShopContext.Provider value={contextValue}>

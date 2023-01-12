@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { PRODUCTS } from "../../assets/productInfo/products";
 import { ShopContext } from "../../context/shop-context";
 import { CartItem } from "./CartItem";
+import { useNavigate } from "react-router-dom";
 
 export const Cart = () => {
-  const { cartItems, calSubtotal } = useContext(ShopContext);
+  const { cartItems, calSubtotal, clearCart } = useContext(ShopContext);
   const subtotal = calSubtotal();
+  const navigate = useNavigate();
   return (
     <div>
       <div>
@@ -15,11 +17,25 @@ export const Cart = () => {
         {subtotal === 0 || subtotal === "0.00" ? (
           <h1>Cart is empty. Add some products to the cart.</h1>
         ) : (
-          <div className="flex gap-12 justify-center items-center">
+          <div className="flex  flex-col gap-12 justify-center items-center">
             <h1>Subtotal is ${subtotal}</h1>
-            <button className="bg-blue-500 rounded hover:scale-150 p-2 text-white">
-              Checkout
-            </button>
+            <div className="flex gap-12">
+              <button
+                onClick={() => navigate("/")}
+                className="bg-blue-500 rounded hover:bg-blue-600 p-2 text-white"
+              >
+                Continue Shopping
+              </button>
+              <button
+                onClick={() => {
+                  clearCart();
+                  navigate("/");
+                }}
+                className="bg-blue-500 rounded hover:bg-blue-600 p-2 text-white"
+              >
+                Checkout
+              </button>
+            </div>
           </div>
         )}
         <div className="flex flex-col gap-12">
