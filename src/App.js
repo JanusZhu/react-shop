@@ -5,10 +5,11 @@ import { Shop } from "./pages/shop/Shop";
 import { Cart } from "./pages/cart/Cart";
 import { Navbar } from "./components/navbar/navbar";
 import { ShopContextProvider } from "./context/shop-context";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="App min-w-full">
+    <div className="App">
       <ShopContextProvider>
         <HashRouter>
           <Navbar />
@@ -23,6 +24,7 @@ function App() {
               }
             ></Route>
           </Routes>
+          <Footer />
         </HashRouter>
       </ShopContextProvider>
     </div>

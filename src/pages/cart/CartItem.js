@@ -13,9 +13,9 @@ export const CartItem = (props) => {
       <div className="flex flex-col justify-center items-center gap-2">
         <p className="text-1xl font-bold">{title}</p>
         <p>${price}</p>
-        <div>
+        <div className="border-2 border-solid border-black-500 rounded-full p-1">
           <button
-            className="bg-blue-500 text-white px-3 py-1 rounded-l-lg"
+            className="text-black px-3 py-1 rounded-full hover:bg-slate-200 font-mono"
             onClick={() => {
               deleteItem(id);
             }}
@@ -32,7 +32,7 @@ export const CartItem = (props) => {
             }}
           />
           <button
-            className="bg-blue-500 text-white px-3 py-1 rounded-r-lg"
+            className="text-black px-3 py-1 rounded-full hover:bg-slate-200"
             onClick={() => {
               addItem(id);
             }}

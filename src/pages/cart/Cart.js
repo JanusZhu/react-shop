@@ -21,8 +21,8 @@ export const Cart = () => {
           <h1>Cart is empty. Add some products to the cart.</h1>
         </div>
       ) : (
-        <div className="flex pl-8 gap-8 relative">
-          <div className="flex flex-col gap-8 w-3/5 border-solid rounded border-2 border-dark pt-4 pb-0 flex-start shadow-md mb-0 shadow-black">
+        <div className="flex pl-8 gap-8 justify-start items-start mb-20 py-0">
+          <div className="flex flex-col gap-8 w-3/5 border-solid rounded border-2 border-dark m-0 justify-start shadow-md shadow-black p-0">
             {PRODUCTS.map((product) => {
               if (cartItems[product.id] !== 0) {
                 return <CartItem key={product.id} data={product} />;
